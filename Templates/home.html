@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- here we have Linked the boxicons -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <!-- Here we have Linked are own css.style file -->
+    <link rel="stylesheet" href="{% static 'css/Style.css' %}" />
+    <!-- Here we have linked the bootstrap.css file from static folder -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+    <title>Portfolio || Himanshu Jain</title>
+  </head>
+  <body>
+    <!-- This is the nav bar of are code -->
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="navbar-brand">
+        <img
+          src="{% static 'images/profile-pic.png' %}"
+          alt=""
+          class="profile-pic"
+        />
+      </div>
+      <div class="navbar-items">
+        <a href="#about"><i class="bx bx-user"></i> About</a>
+        <a href="#skills"><i class="bx bx-code"></i> Skills</a>
+        <a href="#work"><i class="bx bx-briefcase"></i> Work</a>
+        <a href="#techinfo"><i class="bx bx-info-circle"></i> Tech Info</a>
+        <a href="#contact"><i class="bx bx-envelope"></i> Contact</a>
+      </div>
+      <!-- Add a button to toggle the navigation menu for small screens -->
+      <button class="navbar-toggler" onclick="toggleNavbar()">
+        <i class="bx bx-menu"></i>
+      </button>
+    </nav>
+
+    <!-- About my self a littel bit -->
+    <section id="home" class="home bg-light p-5">
+      <div class="container d-flex justify-content-between">
+        <div class="home-content">
+          <h1>Hi I'm <span>Himanshu Jain</span></h1>
+          <div class="text-animated">
+            <h3>Python Full Stack Developer</h3>
+          </div>
+          <p>
+            As a YouTube channel creator, I am passionate about sharing
+            knowledge and skills in data structures and algorithms (DSA) using
+            Python. I have successfully launched My own channel, where i produce
+            engaging and informative videos that cover various topics and levels
+            of DSA in Python, reaching thousands of viewers and subscribers.
+          </p>
+          <p>
+            Have a strong background in computer science and engineering, having
+            graduated from Sagar Group of Institutions with a Bachelor of
+            Engineering degree in CSE. proficient in multiple programming
+            languages, such as C++, Python, and SQL, and have earned multiple
+            certifications from HackerRank, including SQL, Oracle Certified
+            Expert Database SQL, and Python. also have experience in web
+            development, using frameworks such as Django and Flask.
+          </p>
+
+          <!-- Add the image here -->
+        </div>
+        <div
+          class="home-content-2 d-flex flex-column justify-content-center align-items-center"
+        >
+          <div class="main-img">
+            <img
+              src="{% static 'images/profile-pic.png' %}"
+              alt=""
+              class="about-img"
+            />
+          </div>
+
+          <div class="btn-box m-4">
+            <a href="#" class="btn btn-dark">Hire Me</a>
+            <a href="#" class="btn btn-secondary">Let's Talk</a>
+          </div>
+        </div>
+      </div>
+      <div class="home-sci mt-4">
+        <a href="#" class="btn btn-outline-dark"
+          ><i class="bx bxl-facebook"></i
+        ></a>
+        <a href="#" class="btn btn-outline-dark"
+          ><i class="bx bxl-twitter"></i
+        ></a>
+        <a href="#" class="btn btn-outline-dark"
+          ><i class="bx bxl-instagram"></i
+        ></a>
+        <a href="#" class="btn btn-outline-dark"
+          ><i class="bx bxl-linkedin"></i
+        ></a>
+      </div>
+
+      <div class="home-imgHover"></div>
+    </section>
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script>
+      // JavaScript function to toggle the visibility of the navigation menu
+      function toggleNavbar() {
+        const navbar = document.querySelector(".navbar");
+        navbar.classList.toggle("open");
+      }
+    </script>
+  </body>
+</html>
